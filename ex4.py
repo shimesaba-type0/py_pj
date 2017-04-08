@@ -1,23 +1,25 @@
 # -*- coding: utf-8 -*-
+# Python 2.7.6
+# 
 # n*nの行列を入れ替える関数を作ってください。
 # before [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 # after [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
 
 #arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 #arr = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]
-arr = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]		# 3x4 のループ
+#arr = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]
+#=> [[1, 5, 9], [2, 6, 10], [3, 7, 11,], [4, 8, 12]]
+arr = [[1, 2], [3, 4], [5, 6], [7, 8], [9, 10]]
+#=> [[1, 3, 5, 7, 9], [2, 4, 6, 8, 10]]
 arr2 = []
 
-for i in range(len(arr)):
+for i in range(len(arr[0])):
     arr2.append([])
-print(arr2)
+
 for i in range(len(arr)):
-    #arr2.append([])
+    k = 0
     for j in range(len(arr[i])):
-        print(len(arr[i]))
-        arr2[i].append(arr[j][i])
-        print("i : %s" %(i))
-        print("j : %s" %(j))
-        print(arr2)
+        arr2[k].append(arr[i][j])
+        k += 1
 print(arr)
 print(arr2)
