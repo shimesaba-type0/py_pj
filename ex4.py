@@ -11,15 +11,12 @@
 #=> [[1, 5, 9], [2, 6, 10], [3, 7, 11,], [4, 8, 12]]
 arr = [[1, 2], [3, 4], [5, 6], [7, 8], [9, 10]]
 #=> [[1, 3, 5, 7, 9], [2, 4, 6, 8, 10]]
+
 arr2 = []
-
-for i in range(len(arr[0])):
-    arr2.append([])
-
 for i in range(len(arr)):
-    k = 0
     for j in range(len(arr[i])):
-        arr2[k].append(arr[i][j])
-        k += 1
+        if len(arr2) < len(arr[0]):
+            arr2.append([])
+        arr2[j].append(arr[i][j])
 print(arr)
 print(arr2)
